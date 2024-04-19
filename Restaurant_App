@@ -1,0 +1,303 @@
+from tkinter import *
+
+root=Tk()
+
+root. geometry('1270x690+0+0')
+
+root.resizable(0,0)# this make whole frame of the the app
+
+root.title('Restaurant Managment System created by Eibad')
+
+root.config(bg='firebrick4')
+
+topFrame=Frame(root,bd=10,relief=RIDGE,bg='firebrick4') # here provide background colour
+topFrame.pack(side=TOP)
+
+labelTitle=Label(topFrame,text='Restaurant Managment System',font=('arial',30,'bold'),
+                 fg='yellow',bd=9,bg='red4',width=51) #topframe lable and font
+labelTitle.grid(row=0,column=0)   # use grid method getting inside top frame
+#Creating Frames here left hand side
+menuFrame=Frame(root,bd=10,relief=RIDGE,bg="firebrick4")
+menuFrame.pack(side=LEFT)
+
+costFrame=Frame(menuFrame,bd=4,relief=RIDGE)
+costFrame.pack(side=BOTTOM)
+
+foodFrame=LabelFrame(menuFrame,text='Food',font=('arial',19,'bold'),bd=10,relief=RIDGE,fg='red4')
+foodFrame.pack(side=LEFT)
+
+drinksFrame=LabelFrame(menuFrame,text='Drinks',font=('arial',19,'bold'),bd=10,relief=RIDGE,fg='red4')
+drinksFrame.pack(side=LEFT)
+
+CakesFrame=LabelFrame(menuFrame,text='Cakes',font=('arial',19,'bold'),bd=10,relief=RIDGE, fg='red4')
+CakesFrame.pack(side=LEFT)
+
+rightFrame=Frame(root,bd=15,relief=RIDGE)
+rightFrame.pack(side=RIGHT)
+
+#CalCULATOR FRAME
+calculatorFrame=Frame(rightFrame,bd=1,relief=RIDGE)
+calculatorFrame.pack()
+
+#Receipt Frame
+
+receiptFrame=Frame(rightFrame,bd=4,relief=RIDGE)
+receiptFrame.pack()
+
+buttontFrame=Frame(rightFrame,bd=3,relief=RIDGE)
+buttontFrame.pack()
+#var
+var1=IntVar()
+var2=IntVar()
+var3=IntVar()
+var4=IntVar()
+var5=IntVar()
+var6=IntVar()
+var7=IntVar()
+var8=IntVar()
+var9=IntVar()
+var10=IntVar()
+var11=IntVar()
+var12=IntVar()
+var13=IntVar()
+var14=IntVar()
+var15=IntVar()
+var16=IntVar()
+var16=IntVar()
+var17=IntVar()
+var18=IntVar()
+var19=IntVar()
+var20=IntVar()
+var21=IntVar()
+var22=IntVar()
+var23=IntVar()
+
+var24=IntVar()
+var25=IntVar()
+var26=IntVar()
+var27=IntVar()
+
+e_roti=(StringVar)
+e_daal=StringVar()
+e_sabji=StringVar()
+e_chawal=StringVar()
+e_fish=StringVar()
+e_mutton=StringVar()
+e_kebab=StringVar()
+e_chicken=StringVar()
+e_paneer=StringVar()
+                                       # drink  Variable
+e_lassi=StringVar()
+e_coffee=StringVar()
+e_faluda=StringVar()
+e_shikanji=StringVar()
+e_roohafza=StringVar()
+e_jaljeera=StringVar()
+e_masalachai=StringVar()
+e_badammilk=StringVar()
+e_coldrink=StringVar()
+
+e_oreo=StringVar()
+e_Kitkat=StringVar()
+e_Vanilla=StringVar()
+e_apple=StringVar()
+e_blackforest=StringVar()
+e_banana=StringVar()
+e_brownie=StringVar()
+e_pineapple=StringVar()
+e_chocolate=StringVar()
+
+
+e_roti.set('0')
+e_daal.set('0')
+e_sabji.set('0')
+e_chawal.set('0')
+e_fish.set('0')
+e_mutton.set('0')
+e_kebab.set('0')
+e_chicken.set('0')
+e_paneer.set('0')
+
+
+
+
+#FOOD
+
+roti=Checkbutton(foodFrame, text='Roti',font=('ROTI',18,'bold'),onvalue=1,offvalue=0,variable=var1)
+roti.grid(row=0,column=0,sticky=W)
+
+daal=Checkbutton(foodFrame, text='Daal',font=('Daal',18,'bold'),onvalue=1,offvalue=0,variable=var2)
+daal.grid(row=1,column=0,sticky=W)
+
+fish=Checkbutton(foodFrame, text='fish',font=('Fish',18,'bold'),onvalue=1,offvalue=0,variable=var3)
+fish.grid(row=2,column=0,sticky=W)
+
+sabji=Checkbutton(foodFrame, text='sabji',font=('Fish',18,'bold'),onvalue=1,offvalue=0,variable=var4)
+sabji.grid(row=3,column=0,sticky=W)
+
+kebab=Checkbutton(foodFrame, text='kebab',font=('kebab',18,'bold'),onvalue=1,offvalue=0,variable=var5)
+kebab.grid(row=4,column=0,sticky=W)
+
+Chawal=Checkbutton(foodFrame, text='Chawal',font=('Chawal',18,'bold'),onvalue=1,offvalue=0,variable=var6)
+Chawal.grid(row=5,column=0,sticky=W)
+
+Mutton=Checkbutton(foodFrame, text='Mutton',font=('Mutton',18,'bold'),onvalue=1,offvalue=0,variable=var7)
+Mutton.grid(row=6,column=0,sticky=W)
+
+Paneer=Checkbutton(foodFrame, text='Paneer',font=('Paneer',18,'bold'),onvalue=1,offvalue=0,variable=var8)
+Paneer.grid(row=7,column=0,sticky=W)
+
+Chicken=Checkbutton(foodFrame, text='Chicken',font=('Chicken',18,'bold'),onvalue=1,offvalue=0,variable=var9)
+Chicken.grid(row=8,column=0,sticky=W)
+
+#Entry Fields for Food Item
+
+textroti=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_roti)
+textroti.grid(row=0, column=1)
+
+textdaal=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_daal)
+textdaal.grid(row=1, column=1)
+
+textfish=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_fish)
+textfish.grid(row=2, column=1)
+
+textsabji=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_sabji)
+textsabji.grid(row=3, column=1)
+
+textkebab=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_kebab)
+textkebab.grid(row=4, column=1)
+
+textchawal=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_chawal)
+textchawal.grid(row=5, column=1)
+
+textmutton=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_mutton)
+textmutton.grid(row=6, column=1)
+
+textPaneer=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_paneer)
+textPaneer.grid(row=7, column=1)
+
+textchicken=Entry(foodFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_chicken)
+textchicken.grid(row=8, column=1)
+
+#Drinks
+
+lassi=Checkbutton(drinksFrame, text='lassi',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var10)
+lassi.grid(row=0,column=0,sticky=W)
+
+coffee=Checkbutton(drinksFrame, text='Coffee',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var11)
+coffee.grid(row=1,column=0,sticky=W)
+
+faluda=Checkbutton(drinksFrame, text='Faluda',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var12)
+faluda.grid(row=2,column=0,sticky=W)
+
+Shikanji=Checkbutton(drinksFrame, text='Shikanji',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var13)
+Shikanji.grid(row=3,column=0,sticky=W)
+
+jaljeera=Checkbutton(drinksFrame, text='jaljeera',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var14)
+jaljeera.grid(row=4,column=0,sticky=W)
+
+roohafza=Checkbutton(drinksFrame, text='Roohafza',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var15)
+roohafza.grid(row=5,column=0,sticky=W)
+
+masalatea=Checkbutton(drinksFrame, text='MasalaTea',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var16)
+masalatea.grid(row=6,column=0,sticky=W)
+
+badammilk=Checkbutton(drinksFrame, text='Badam Milk',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var17)
+badammilk.grid(row=7,column=0,sticky=W)
+
+colddrinks=Checkbutton(drinksFrame, text='Cold Drinks',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var18)
+colddrinks.grid(row=8,column=0,sticky=W)
+
+# Entry Fields for Drink Items
+
+textlassi=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_lassi)
+textlassi.grid(row=0, column=1)
+
+textcoffee=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_coffee)
+textcoffee.grid(row=1, column=1)
+
+textfaluda=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_faluda)
+textfaluda.grid(row=2, column=1)
+
+textshikanji=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_shikanji)
+textshikanji.grid(row=3, column=1)
+
+textjaljeera=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_jaljeera)
+textjaljeera.grid(row=4, column=1)
+
+textrohafza=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_roohafza)
+textrohafza.grid(row=5, column=1)
+
+textmasalatea=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_masalachai)
+textmasalatea.grid(row=6, column=1)
+
+textbadammilk=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_badammilk)
+textbadammilk.grid(row=7, column=1)
+
+textcoldrink=Entry(drinksFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_coldrink)
+textcoldrink.grid(row=8, column=1)
+
+#Cakes
+
+oreocake=Checkbutton(CakesFrame, text='Oreo',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var19)
+oreocake.grid(row=0,column=0,sticky=W)
+
+applecake=Checkbutton(CakesFrame, text='Apple',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var20)
+applecake.grid(row=1,column=0,sticky=W)
+
+Kitkatcake=Checkbutton(CakesFrame, text='KitKate',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var21)
+Kitkatcake.grid(row=2,column=0,sticky=W)
+
+vanillcake=Checkbutton(CakesFrame, text='Vanilla',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var22)
+vanillcake.grid(row=3,column=0,sticky=W)
+
+bananacake=Checkbutton(CakesFrame, text='Banana Cake',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var23)
+bananacake.grid(row=4,column=0,sticky=W)
+
+browncake=Checkbutton(CakesFrame, text='Brown Cake',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var24)
+browncake.grid(row=5,column=0,sticky=W)
+
+pineapplecake=Checkbutton(CakesFrame, text='PineApple Cake',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var25)
+pineapplecake.grid(row=6,column=0,sticky=W)
+
+chocolatecake=Checkbutton(CakesFrame, text='Cholocate Cake',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var26)
+chocolatecake.grid(row=7,column=0,sticky=W)
+
+blackforstcake=Checkbutton(CakesFrame, text='Black Forest Cake',font=('arial',18,'bold'),onvalue=1,offvalue=0,variable=var27)
+blackforstcake.grid(row=8,column=0,sticky=W)
+
+#entry Fields of Cakes
+
+textoreo=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_oreo)
+textoreo.grid(row=0, column=1)
+
+Kitkatcake=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_Kitkat)
+Kitkatcake.grid(row=1, column=1)
+
+Vanilla=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_Vanilla)
+Vanilla.grid(row=2, column=1)
+
+e_apple=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_apple)
+e_apple.grid(row=3, column=1)
+
+e_blackforest=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_blackforest)
+e_blackforest.grid(row=4, column=1)
+
+
+e_banana=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_banana)
+e_banana.grid(row=5, column=1)
+
+e_brownie=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_brownie)
+e_brownie.grid(row=6, column=1)
+
+e_pineapple=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_pineapple)
+e_pineapple.grid(row=7, column=1)
+
+e_chocolate=Entry(CakesFrame, font=('ariel',18,'bold'),bd=7,width=6,state=DISABLED,textvariable=e_chocolate)
+e_chocolate.grid(row=8, column=1)
+
+
+
+
+
+root.mainloop()
